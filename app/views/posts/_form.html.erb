@@ -1,6 +1,9 @@
 <% @post.tags.build %>
 <%= form_for(@post) do |f| %>
 
+ <%= render :partial => 'error', :locals => {:post => @post} %>
+ 
+
   <div class="field">
     <%= f.label :name %><br />
     <%= f.text_field :name %>
